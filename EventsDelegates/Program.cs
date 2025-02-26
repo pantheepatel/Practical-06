@@ -1,17 +1,21 @@
-using EventsDelegates;
-
-class Program
+namespace EventsDelegates
 {
-    public static void Main()
+    class Program
     {
-        ProcessBusinessLogic bl = new ProcessBusinessLogic();
-        bl.ProcessCompleted += bl_ProcessCompleted;
-        bl.StartProcess();
-    }
+        public static void Main()
+        {
+            // creating instance of class
+            ProcessBusinessLogic bl = new ProcessBusinessLogic();
+            // Subscribing the event handler to the event
+            bl.ProcessCompleted += bl_ProcessCompleted;
+            // Initiating the process
+            bl.StartProcess();
+        }
 
-    // event handler
-    public static void bl_ProcessCompleted()
-    {
-        Console.WriteLine("Process Completed!");
+        // Event handler method that gets executed when the event is raised
+        public static void bl_ProcessCompleted()
+        {
+            Console.WriteLine("Process Completed!");
+        }
     }
 }
