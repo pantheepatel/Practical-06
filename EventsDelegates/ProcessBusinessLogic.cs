@@ -7,10 +7,11 @@ namespace EventsDelegates
         // creating event(ProcessCompleted) and binding it with delegate(ProcessCompletedEventHandler)
         public event ProcessCompletedEventHandler? ProcessCompleted;
         // method to be invoked from main method after instance creation
+        // method to start the process, which will later trigger the event
         public void StartProcess()
         {
             Console.WriteLine("Process Started!");
-            // method invokation
+            // method invocation
             OnProcessCompleted();
         }
 
