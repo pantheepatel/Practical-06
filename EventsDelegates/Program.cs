@@ -12,7 +12,7 @@ namespace EventsDelegates
             bl.StartProcess();
         }
 
-        // Event handler method that gets executed when the event is raised
+        // method that gets executed when the event is raised
         public static void bl_ProcessCompleted()
         {
             Console.WriteLine("Process Completed!");
